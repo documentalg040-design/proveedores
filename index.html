@@ -1,0 +1,1613 @@
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agrícola Atilatán - Proveedores</title>
+<style>
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-image: url("FONDO.jpg"); 
+  background-size: cover;             
+  background-repeat: no-repeat;       
+  background-attachment: fixed;       
+  background-position: center;        
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+.banner-gif{
+width:100%;
+text-align:center;
+margin-top:00px;
+}
+.banner-gif img{
+width:500px;
+max-width:90%;
+
+height:auto;
+display:block;
+margin:0 auto;
+}
+
+header {
+background-color: white;
+color: #2e7d32;
+text-align: center;
+padding: 10px;
+position: relative;
+padding: 10px 10px;
+    }
+
+header img {
+width: 130px;
+height: auto;
+display: block;
+margin-left: 59;
+margin-right: auto;    }
+    h1 { margin: 0; }
+  nav {
+  background-color: #388e3c;
+padding: 4px 80px;
+text-align: center;
+   }
+    nav button {
+      background-color: #fff;
+      border: none;
+      padding: 12px 13px;
+      margin: 05px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #000; /* Negro */
+      transition: 0.3s;
+    }
+    nav button:hover { background-color: #c8e6c9; }
+    section {
+      padding: 20px 40px;
+      display: none;
+      animation: fadeIn 0.5s;
+    }
+    h2 {
+      color: #2e7d32;
+      border-bottom: 2px solid #c8e6c9;
+      padding-bottom: 5px;
+    }
+    ul {
+      list-style-type: "📍 ";
+      margin-left: 20px;
+    }
+    footer {
+      background-color: #c8e6c9;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      color: #2e7d32;
+    }
+    @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+    .linea-verde {
+      border: none;
+      height: 3px;
+      background: linear-gradient(to right, #28a745, #5fd16f);
+      margin: 20px 0;
+    }
+    .nota-importante, .alerta-tiempo {
+      background-color: #fff3cd;
+      border: 1px solid #ffeeba;
+      padding: 15px;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+    .alerta-tiempo {
+      background-color: #e8f5e9;
+      border: 1px solid #c8e6c9;
+    }
+.titulo-seccion span {
+background-color: white;
+color: #2e7d32;
+font-size: 22px;
+font-weight: bold;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+}
+.btn-info{
+    background-color: white;
+    color: #000;
+    border: 2px solid #2e7d32;
+    padding: 8px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+
+    position: absolute;
+    top: 35px;
+    right: 10px;
+}
+align-items: center;
+}
+.btn-info:hover{
+background-color: #2e7d32;
+color: white;
+}
+.modal{
+    display:none;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    z-index:1000;
+}
+
+.modal-contenido{
+    background:white;
+    width:60%;
+    margin:5% auto;
+    padding:20px;
+    border-radius:10px;
+    text-align:left;
+}
+
+.cerrar{
+    float:right;
+    font-size:30px;
+    cursor:pointer;
+    color:red;
+}
+/* Tooltip */
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 350px;
+    background-color: #ffffff;
+    color: #333;
+    text-align: left;
+    border: 2px solid #2e7d32;
+    border-radius: 10px;
+    padding: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+    position: absolute;
+    z-index: 9999;
+
+    top: 110%;
+    left: 0;
+
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* ESTA PARTE ES OBLIGATORIA */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -8px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent transparent #2e7d32;
+}
+</style>
+</head>
+<body>
+<header>
+
+<img src="logo.png" alt="Logo Agrícola Atilatán">
+<div class="titulo-seccion">
+<span>REQUISITOS PARA LA CREACIÓN DE PROVEEDORES Y CLIENTES</span>
+<button class="btn-info" onclick="mostrarInfo()">
+🔍 Información de la empresa
+</button>
+</div>
+</header>
+
+<div id="infoEmpresa" class="modal">
+<div class="modal-contenido">
+<span class="cerrar" onclick="cerrarInfo()">&times;</span>
+
+    <h2>Información de la Empresa</h2>
+
+    <p><strong>Razón Social:</strong> Agricola Atitlan S.A.S.</p>
+    <p><strong>NIT:</strong> 901.469.258-5</p>
+    <p><strong>Teléfono:</strong> 3105296549</p>
+    <p><strong>Ciudad:</strong> Medellín</p>
+    <p><strong>Departamento:</strong> Antioquia</p>
+    <p><strong>Dirección:</strong> Calle 9A Sur #25-95 Apto 403</p>
+    <p><strong>Actividad:</strong> Cultivo de frutas tropicales y subtropicales</p>
+    <p><strong>Fecha de fundacion:</strong> 20 de Marzo del 2021</p>
+    <p><strong>Nombre del Representante Legal:</strong> Carlos Mario Restrepo del Toro - Jose Alejandro Restrepo del Toro</p>
+  </div>
+</div>
+  <nav>
+    <div class="tooltip">
+    <button onclick="mostrar('permanente')">Creación Permanente</button>
+<span class="tooltiptext">
+  <strong>TIPO V - Proveedor Permanente</strong><br><br>
+    Aplica para proveedores que serán utilizados frecuentemente por la empresa para la adquisición de bienes o servicios.
+    </span>
+</div>
+    <div class="tooltip">
+<button onclick="mostrar('unica')">Creación Única Vez</button>
+
+<span class="tooltiptext">
+<strong>TIPO VU - Proveedor de Única Vez</strong><br><br>
+Aplica para proveedores que serán utilizados en una única ocasión. Una vez finalizada la compra o prestación del servicio, el proveedor quedará inactivo en el sistema.
+</span>
+</div>
+    <div class="tooltip">
+    <button onclick="mostrar('creaciondecliente')">
+        Creación de Cliente
+    </button>
+
+    <span class="tooltiptext">
+    <strong>TIPO C - CREACIÓN DE CLIENTE</strong><br><br>
+    Aplica para personas naturales o jurídicas que adquirirán productos o servicios de Agrícola Atitlán o de cualquiera de las empresas que conforman el Grupo HAME.
+    </span>
+</div>
+    <button onclick="mostrar('documentos')">Documentos</button>
+    <button onclick="mostrar('listaProveedores')">Lista de Proveedores</button>
+    <button onclick="mostrar('contacto')">Contacto</button>
+  
+</nav>
+<div class="banner-gif" id="bannerGif">
+<img src="GIF.gif" alt="GIF Proveedores">
+</div>
+
+<section id="permanente">
+<h2> 🥑 Creación Permanente de Proveedores (TIPO V)</h2>
+<p>Adjuntar los siguientes formularios diligenciados y firmados de manera manuscrita:</p>
+      <ul>
+      <li>Código de Conducta Socios de Negocios</li>
+      <li>Compromiso Antisoborno Socios de Negocios</li>
+      <li>Cuestionario Socios de Negocios</li>
+      <li>Política de Transparencia, Ética y Anticorrupción</li>
+      <li>Solicitud de Inscripción de Proveedor</li>
+    </ul>
+    <h3>Documentos adicionales:</h3>
+    <ul>
+      <li>Cámara de Comercio (vigencia no mayor a 30 días)</li>
+      <li>RUT actualizado (últimos 6 meses)</li>
+      <li>Certificación bancaria vigente</li>
+      <li>Cédula del representante legal</li>
+<li>Adjuntar captura de pantalla de la consulta realizada en la DIAN, donde se visualicen las obligaciones tributarias del proveedor.</li>
+    </ul>
+<hr class="linea-verde">
+
+<style>
+.linea-verde {
+    border: none;
+    height: 3px;
+    background: linear-gradient(to right, #28a745, #5fd16f);
+    margin: 20px 0;
+}
+</style>
+<div class="nota-importante">
+    <h3>⚠️Importante</h3>
+    <p>
+       🚨Antes de enviar la documentación, verifique que las firmas plasmadas en
+        los formatos correspondan exactamente a la firma registrada en la cédula
+        de ciudadanía del representante legal.
+    </p>
+    <p>
+        Documentos con firmas que no coincidan podrán ser rechazados y devueltos
+        para su respectiva corrección.
+    </p>
+</div>
+
+</section>
+
+<section id="unica">
+    <h2> 🥑 Creación Única Vez de Proveedores (TIPO VU)</h2>
+<p>En este caso, se deben adjuntar únicamente:</p>
+
+    <ul>
+      <li>Cámara de Comercio (vigencia no mayor a 30 días)</li>
+      <li>RUT actualizado (vigencia no menor a 6 meses)</li>
+      <li>Certificación bancaria vigente</li>
+      <li>Cédula del representante legal</li>
+      <li>Adjuntar captura de pantalla de la consulta realizada en la DIAN, donde se visualicen las obligaciones tributarias del proveedor.</li>
+
+    </ul>
+  </section>
+  <section id="documentos">
+    <h2>📂 Documentos para Creación de Proveedores (TIPO V)</h2>
+    
+  <h3>Descargar formatos:</h3>
+  <ul>
+    <li>
+      <a href="codigo-conducta.pdf.pdf" target="_blank">📑 Ver Código de Conducta</a>
+    </li>
+    <li>
+      <a href="compromiso-antisoborno.pdf.pdf" target="_blank">🛡️ Ver Compromiso Antisoborno</a>
+    </li>
+    <li>
+      <a href="cuestionario.pdf.pdf" target="_blank">📝 Ver Cuestionario Socios de Negocios</a>
+    </li>
+    <li>
+      <a href="politica-transparencia.pdf.pdf" target="_blank">📘 Ver Política de Transparencia</a>
+    </li>
+    <li>
+      <a href="solicitud-inscripcion.pdf.pdf" target="_blank">📂 Ver Solicitud de Inscripción</a>
+      
+    </li>
+  </ul>
+
+    <h3>Visualizar guía en línea:</h3>
+    <iframe src="guia-diligenciamiento.pdf.pdf" width="100%" height="600px"></iframe>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>📧 Envío de documentos: <strong>aehernandezg@grupohame.com</strong> con copia a <strong>nhenao@grupohame.com</strong></p>
+<p>📞 Teléfono: +57 3105627201 </p>
+<p>Encargada de Gestión de Proveedores: <strong>Angie Hernández</strong></p>
+   <div class="alerta-tiempo">
+    <h3>⏳ Tiempo estimado de creación</h3>
+    <p>
+        El proceso de creación de proveedores tarda aproximadamente entre
+        <strong>3 y 5 días hábiles</strong>.
+    </p>
+    <p>
+        Estos tiempos podrán cumplirse siempre y cuando los documentos sean
+        entregados completos y debidamente diligenciados. nos reservamos el derecho de retornar  de devolver la documentación las veces que sean
+        necesarias hasta contar con la totalidad de los requisitos solicitados.
+    </p> 
+</div>
+ </section>
+  <section id="creaciondecliente">
+
+<h2>👤 Creación de Cliente</h2>
+
+<p>Para realizar la creación de un cliente, adjunte los siguientes documentos:</p>
+
+<ul>
+    <li>📄 RUT actualizado</li>
+    <li>🪪 Cédula ciudadanía</li>
+    <li>🏢 Cámara de Comercio (vigente)</li>
+    <li>📃Certificación bancaria</li>
+    <li>✅ Código de Conducta Socios de Negocios</li>
+    <li>🖋Formato de Creación de Cliente diligenciado</li>
+</ul>
+</section>
+
+
+<section id="listaProveedores">
+<h2>📋 Lista de Proveedores Creados</h2>
+
+  <!-- Barra de búsqueda -->
+  <input type="text" id="buscador" placeholder="🔍 Buscar por NIT o NOMBRE..."
+         style="width:100%; padding:8px; margin-bottom:10px; border:1px solid #ccc; border-radius:5px;">
+
+  <table id="listaProveedoresTabla" border="1" style="width:100%; border-collapse:collapse; text-align:left; font-size:12px;">
+    <thead style="background-color:#c8e6c9; color:#2e7d32;">
+      <tr>
+        <th>NIT</th>
+        <th>Nombre del Proveedor</th>
+        <th>Código JD</th>
+        <th>Dirección</th>
+        <th>Departamento / Municipio / País</th>
+        <th>Teléfono</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>800165079-1</td>
+        <td>SUKY MOTO S.A</td>
+        <td>1555394</td>
+        <td>CR 30 19 66 BRR VILLA NUEVA</td>
+        <td>Valle del Cauca / Tuluá / Colombia</td>
+        <td>6012254747</td>
+        <td>contabilidad@sukymoto.com</td>
+      </tr>
+      <tr>
+        <td>52196999-2</td>
+        <td>Diana Edith Castellanos Suárez</td>
+        <td>2160397</td>
+        <td>CL 25 B 85 B 46 P 2</td>
+        <td>Bogotá D.C / Colombia</td>
+        <td>6014603485</td>
+        <td>castellanosdiana@hotmail.com</td>
+      </tr>
+      <tr>
+        <td>900075982-4</td>
+        <td>Distribuidor Agropecuario del Quindío S.A.</td>
+        <td>2325473</td>
+        <td>CR 18 AV EL EDEN 51 35</td>
+        <td>Quindío / Armenia / Colombia</td>
+        <td>3147005701</td>
+        <td>distriagro@gmail.com</td>
+      </tr>
+      <tr>
+        <td>805012921-0</td>
+        <td>Patrimonios Autónomos Acción Fiduciaria</td>
+        <td>2326555</td>
+        <td>CL 85 9 65</td>
+        <td>Bogotá D.C / Colombia</td>
+        <td>3177226678</td>
+        <td>impuestos@accion.co</td>
+      </tr>
+      <tr>
+        <td>6146376-3</td>
+        <td>Uriel Valencia Velásquez</td>
+        <td>2326563</td>
+        <td>EN CORR PRIMAVERA BRISAS DEL RIO</td>
+        <td>Valle del Cauca / Bolívar / Colombia</td>
+        <td>3160400369</td>
+        <td>urielvalenciavelasquez63@gmail.com</td>
+      </tr>
+<tr>
+  <td>800200257-6</td>
+  <td>ADEQUIM S.A.S</td>
+  <td>2329636</td>
+  <td>CR 72 A 68 B 46 BRR BOYACA REAL</td>
+  <td>Bogotá D.C / Colombia</td>
+  <td>3114472976</td>
+  <td>contabilidad@adequim.com</td>
+</tr>
+<tr>
+  <td>901612754-1</td>
+  <td>DEPÓSITO EL PIEDRUNO S.A.S</td>
+  <td>2329639</td>
+  <td>CR 17 24 08</td>
+  <td>Caldas / Manizales / Colombia</td>
+  <td>3113100864</td>
+  <td>recepcionpiedrunosas@gmail.com</td>
+</tr>
+<tr>
+  <td>900342306-0</td>
+  <td>INYECPLÁSTICOS GALEANO S.A.S</td>
+  <td>2332740</td>
+  <td>KM 3.5 VIA EL EDEN</td>
+  <td>Quindío / Armenia / Colombia</td>
+  <td>3182615788</td>
+  <td>facturacion@inyecplasticos.com</td>
+</tr>
+<tr>
+  <td>16548328-1</td>
+  <td>CARLOS HERNÁN RODRÍGUEZ JARAMILLO</td>
+  <td>2335213</td>
+  <td>CR 6 10 20</td>
+  <td>Valle del Cauca / Roldanillo / Colombia</td>
+  <td>3186445257</td>
+  <td>fiestasyeventosroldanillo@hotmail.com</td>
+</tr>
+<tr>
+  <td>1112792103-5</td>
+  <td>MARIANA LONDOÑO ROA</td>
+  <td>2335394</td>
+  <td>CR 3 # 22 - 633 CA Primer piso</td>
+  <td>Valle del Cauca / Cartago / Colombia</td>
+  <td>3122507688</td>
+  <td>mariana23403@gmail.com</td>
+</tr>
+<tr>
+  <td>900776115-3</td>
+  <td>MOTO EXPERIENCIA S.A.S</td>
+  <td>2336815</td>
+  <td>CR 46 46 12</td>
+  <td>Valle del Cauca / Cali / Colombia</td>
+  <td>3188373134</td>
+  <td>notificaciones@motoexperiencia.com</td>
+</tr>
+
+<tr>
+  <td>901546972-6</td>
+  <td>PAYFLOW DIGITAL SAS</td>
+  <td>2338115</td>
+  <td>CR 7 73 42 IN 1 OF 1301</td>
+  <td>Bogotá D.C / Colombia</td>
+  <td>3178873781</td>
+  <td>accounting@payflowapp.co</td>
+</tr>
+
+<tr>
+  <td>901057823-9</td>
+  <td>HOTEL ARMENIA CAMPESTRE S.A.S</td>
+  <td>2338156</td>
+  <td>CA 22 D VDA EL RHIN</td>
+  <td>Quindío / Armenia / Colombia</td>
+  <td>3206604683</td>
+  <td>gerenciacomercial@cibelestours.com</td>
+</tr>
+<tr>
+  <td>830052939-4</td>
+  <td>AGRILAB LABORATORIOS SAS</td>
+  <td>2340829</td>
+  <td>CL 79 B 70 16</td>
+  <td>Bogotá D.C / Colombia</td>
+  <td>6017454697</td>
+  <td>contabilidad@agrilab.com.co</td>
+</tr>
+
+<tr>
+  <td>1113783848-9</td>
+  <td>MONICA LIZETH VELASQUE URIBE</td>
+  <td>2341664</td>
+  <td>CR 10 14 69 BRR BELEN</td>
+  <td>Valle del Cauca / La Unión / Colombia</td>
+  <td>3174733577</td>
+  <td>recepcionfacturasmonica@gmail.com</td>
+</tr>
+
+<tr>
+  <td>1094939109-8 </td>
+  <td>LUISA FERNANDA MALO ZULUAGA</td>
+  <td>2342016</td>
+  <td>BRR MONTEBLANCO UNO MZ G CA CINCO</td>
+  <td>Quindío / Armenia / Colombia</td>
+  <td>312809358</td>
+  <td>luisafmalo0@gmail.com</td>
+</tr>
+
+<tr>
+  <td>901667939-1</td>
+  <td>PEPO S.A.S</td>
+  <td>2342366</td>
+  <td>DG 50 49 49</td>
+  <td>Antioquia / Medellín / Colombia</td>
+  <td>6045112948</td>
+  <td>gerenciapepo@gmail.com</td>
+</tr>
+<tr>
+  <td>901125998-0</td>
+  <td>QUINDIO GLOBAL S.A.S</td>
+  <td>2342372</td>
+  <td>CL 23 NORTE 15 21 OF 1 ED OASIS DE LAURELES</td>
+  <td>Quindío / Armenia / Colombia</td>
+  <td>3155479289</td>
+  <td>mariatnb@gmail.com</td>
+</tr>
+
+<tr>
+  <td>821000758-2</td>
+  <td>ASOCIACIÓN DE RADIOCOMUNICADORES PROFESIONALES A.R.P</td>
+  <td>2346599</td>
+  <td>TEATRO MUNICIPAL</td>
+  <td>Valle del Cauca / Trujillo / Colombia</td>
+  <td>3155678905</td>
+  <td>gerenciaturadio@gmail.com</td>
+</tr>
+
+<tr>
+  <td>901595299-6</td>
+  <td>SOLUCIONES AGRÍCOLAS AVÍCOLAS Y PECUARIAS DEL NORTE S.A.S</td>
+  <td>2347070</td>
+  <td>CL 7 11 23</td>
+  <td>Valle del Cauca / Caicedonia / Colombia</td>
+  <td>3218722300</td>
+  <td>CONTABILIDADAGRONORTESAS@GMAIL.COM</td>
+</tr>
+<tr>
+  <td>10123084-3</td>
+  <td>NOLBERTO IDARRAGA SALGADO</td>
+  <td>2348543</td>
+  <td>AV TREINTA DE AGOSTO 28 - 39</td>
+  <td>Risaralda / Pereira / Colombia</td>
+  <td>3155322156</td>
+  <td>olmavalenciab@gmail.com</td>
+</tr>
+
+<tr>
+  <td>16547500-8</td>
+  <td>JAIRO VARELA JARAMILLO</td>
+  <td>2350484</td>
+  <td>CL 5 8 90 BRR LOS LLANITOS</td>
+  <td>Valle del Cauca / Roldanillo / Colombia</td>
+  <td>3136893069</td>
+  <td>JAIROVARELAJARAMILLO64@GMAIL.COM</td>
+</tr>
+
+<tr>
+  <td>901471743-2</td>
+  <td>HISPATEC COLOMBIA SAS</td>
+  <td>2352974</td>
+  <td>CL 93 B 19 35 OF 201</td>
+  <td>Bogotá D.C / Colombia</td>
+  <td>6016359186</td>
+  <td>contabilidad03.colombia@urglobal.com</td>
+</tr>
+
+<tr>
+  <td>901267294-3</td>
+  <td>NOCUA MOTOS S.A.S.</td>
+  <td>2353399</td>
+  <td>CL 67 25 79 BRR CUBA</td>
+  <td>Risaralda / Pereira / Colombia</td>
+  <td>3196800382</td>
+  <td>nocuamotos@hotmail.com</td>
+</tr>
+
+<tr>
+  <td>800242427-1</td>
+  <td>COMPAÑÍA DE DISTRIBUCIÓN Y TRANSPORTE S.A.S. BIC</td>
+  <td>2353425</td>
+  <td>CR 42 66 11</td>
+  <td>Antioquia / Itagüí / Colombia</td>
+  <td>6044449818</td>
+  <td>ditransa@ditransa.com.co</td>
+</tr>
+
+<tr>
+  <td>1037579709-4</td>
+  <td>ELIZABETH ZAPATA</td>
+  <td>2353431</td>
+  <td>CL 8 42 15</td>
+  <td>Antioquia / Medellín / Colombia</td>
+  <td>3006318838</td>
+  <td>diecisietemedellin@supernotariado.gov.co</td>
+</tr>
+
+<tr>
+  <td>1022389692-8</td>
+  <td>HECTOR STIVEN ESPINOSA ARANGO</td>
+  <td>2354601</td>
+  <td>MZ E CA 20 P 2 BRR CIPRES</td>
+  <td>Valle del Cauca / Caicedonia / Colombia</td>
+  <td>3223686353</td>
+  <td>hespinosa@jahecsolint.com</td>
+</tr>
+
+<tr>
+  <td>901454903-2</td>
+  <td>SUMMA CORP S.A.S</td>
+  <td>2356659</td>
+  <td>CL 16 4 A 22</td>
+  <td>Valle del Cauca / Cartago / Colombia</td>
+  <td>3137193028</td>
+  <td>summacorpsas@gmail.com</td>
+</tr>
+
+<tr>
+  <td>900189642-5</td>
+  <td>BAYPORT COLOMBIA S.A.</td>
+  <td>2356673</td>
+  <td>CR 16 97 46 40 P 5 ED TORRE 97</td>
+  <td>Bogotá D.C / Colombia</td>
+  <td>6017458920</td>
+  <td>notificaciones.judiciales@bayport.com.co</td>
+</tr>
+<tr>
+  <td>1116242560-3</td>
+  <td>ALEXANDRA MARULANDA TAMAYO</td>
+  <td>2359275</td>
+  <td>MZ 58 CA 1 URB BOSQUES DE MARACAIBO</td>
+  <td>Valle del Cauca / Tuluá / Colombia</td>
+  <td>3166907127</td>
+  <td>marula810@hotmail.com</td>
+</tr>
+
+<tr>
+  <td>800152575-7</td>
+  <td>AGROPECUARIA LA HACIENDA Y CIA S.A.S</td>
+  <td>2361659</td>
+  <td>CR 83 B 14 A 80 BRR EL INGENIO</td>
+  <td>Valle del Cauca / Cali / Colombia</td>
+  <td>3168765947</td>
+  <td>INFO@AGROHACIENDA.COM</td>
+</tr>
+
+<tr>
+  <td>901202520-4</td>
+  <td>CORPORACION AMA</td>
+  <td>2362150</td>
+  <td>CR 6 B 15 A 68 BRR SANTA TERESA ALTA</td>
+  <td>Valle del Cauca / La Victoria / Colombia</td>
+  <td>3154918914</td>
+  <td>corporacionama.sas@hotmail.com</td>
+</tr>
+
+<tr>
+  <td>830513863-2</td>
+  <td>DOTACION INTEGRAL S.A.S.</td>
+  <td>2362607</td>
+  <td>CL 4 15 03</td>
+  <td>Risaralda / Pereira / Colombia</td>
+  <td>6063419490</td>
+  <td>financiera@dotacionintegral.com</td>
+</tr>
+
+<tr>
+  <td>800039996-1</td>
+  <td>KUEHNE+ NAGEL SAS</td>
+  <td>2363497</td>
+  <td>CL 113 7 80 P 5 TO AR</td>
+  <td>Bogotá D.C / Colombia</td>
+  <td>6017437000</td>
+  <td>knco.notificaciones.judiciales@kuehne-nagel.com</td>
+</tr>
+
+<tr>
+  <td>70548131-4</td>
+  <td>JOHN JAIRO MARTINEZ OSSA</td>
+  <td>2365275</td>
+  <td>CL 45 B SUR 36 121</td>
+  <td>Antioquia / Envigado / Colombia</td>
+  <td>3022283245</td>
+  <td>jhonjairomartinezossa@gmail.com</td>
+</tr>
+
+<tr>
+  <td>6211289-9</td>
+  <td>LUIS EDUARDO LOPEZ PALACIO</td>
+  <td>2365631</td>
+  <td>CR 17 16 33</td>
+  <td>Valle del Cauca / Caicedonia / Colombia</td>
+  <td>3018265726</td>
+  <td>NO APLICA</td>
+</tr>
+
+<tr>
+  <td>901844075-2</td>
+  <td>TODO PERSONALIZADO SAS</td>
+  <td>2365805</td>
+  <td>CL 45 51 70</td>
+  <td>Antioquia / Medellín / Colombia</td>
+  <td>3016731960</td>
+  <td>todopersonalizadomedellin@gmail.com</td>
+</tr>
+
+<tr>
+  <td>805007083-3</td>
+  <td>RH S.A.S. ESP</td>
+  <td>2366631</td>
+  <td>CR 24 13 387</td>
+  <td>Valle del Cauca / Yumbo / Colombia</td>
+  <td>6025245122</td>
+  <td>fecompras@rhsas.com.co</td>
+</tr>
+
+<tr>
+  <td>901954208-7</td>
+  <td>AGRICOLA VILLADA S.A.S ZOMAC</td>
+  <td>2369292</td>
+  <td>CL 9 3 N 23 AP 201</td>
+  <td>Valle del Cauca / Roldanillo / Colombia</td>
+  <td>3142155154</td>
+  <td>AGRICOLAVILLADASASZOMAC@GMAIL.COM</td>
+</tr>
+<tr>
+  <td>18396229-4</td>
+  <td>JORGE HERNAN VILLA BAQUERO</td>
+  <td>2369358</td>
+  <td>AV COLON 22 240</td>
+  <td>Quindío / Calarcá / Colombia</td>
+  <td>3116042581</td>
+  <td>v.i.l.l.a.motos@hotmail.com</td>
+</tr>
+
+<tr>
+  <td>891410828-3</td>
+  <td>CASA DEL BOMBILLO NO. 2 LTDA</td>
+  <td>2369371</td>
+  <td>CL 16 8 52</td>
+  <td>Risaralda / Pereira / Colombia</td>
+  <td>6063331570</td>
+  <td>administracion@casadelbombillo2.com</td>
+</tr>
+
+<tr>
+  <td>24456570-1</td>
+  <td>HOTEL DE LA CALLE REAL - LIGIA DEL SOCORRO BETANCURT</td>
+  <td>2369375</td>
+  <td>CL 5 NORTE 16 10 AP 402 ED LA CEIBA</td>
+  <td>Quindío / Armenia / Colombia</td>
+  <td>3104557085</td>
+  <td>ligiadelsocorrobetancurt@gmail.com</td>
+</tr>
+
+<tr>
+  <td>1108558291-5</td>
+  <td>MELANIA UMAÑA FIGUEROA</td>
+  <td>2369387</td>
+  <td>CL 41 36 110 CON ALTOS DEL RIO CA 42</td>
+  <td>Quindío / Calarcá / Colombia</td>
+  <td>3104794756</td>
+  <td>melaniaumanafigueroa@gmail.com</td>
+</tr>
+
+<tr>
+  <td>890307682-1</td>
+  <td>PLASTICOS FENIX S.A.S.</td>
+  <td>2369392</td>
+  <td>KM 10 VIA A LA TEBAIDA</td>
+  <td>Quindío / Tebaida / Colombia</td>
+  <td>3122579018</td>
+  <td>plastifenix@gmail.com</td>
+</tr>
+
+<tr>
+  <td>901553034-1</td>
+  <td>DISTRIBUIDORA ASEO LUZ PRODUCTOS INSTITUCIONALES S.A.S</td>
+  <td>2369993</td>
+  <td>CR 20 48 68 BRR LAS ACASIAS</td>
+  <td>Quindío / Armenia / Colombia</td>
+  <td>6067339914</td>
+  <td>servicioalcliente@aseoluz.com</td>
+</tr>
+
+<tr>
+  <td>901189834-6</td>
+  <td>AGRODIAGNOSTICO S.A.S</td>
+  <td>2374113</td>
+  <td>CR 18 55 20</td>
+  <td>Bogotá D.C / Colombia</td>
+  <td>3008158840</td>
+  <td>agrodiagnostico@gmail.com</td>
+</tr>
+
+<tr>
+  <td>901081537-8</td>
+  <td>MASTER EQUIPOS BIOMEDICOS S.A.S</td>
+  <td>2374213</td>
+  <td>CR 42 21 B 38</td>
+  <td>Antioquia / Bello / Colombia</td>
+  <td>3218581021</td>
+  <td>masterequiposbiomedicos@hotmail.com</td>
+</tr>
+
+<tr>
+  <td>91310115MA1K4T3M7A</td>
+  <td>PREMIUM CHOICE GLOBAL LTD</td>
+  <td>2378289</td>
+  <td>Zona de Libre Comercio de China (Shanghai), Edificio 3, 2ª planta, Sala A206, No. 2250, PuDong South Road</td>
+  <td>Shanghai / Distrito de Pudong / China</td>
+  <td>021-62300612</td>
+  <td>m.chang@pchglobal.biz</td>
+</tr>
+
+<tr>
+  <td>94268088-0</td>
+  <td>DIEGO LEYES DIAZ</td>
+  <td>2380223</td>
+  <td>CR 12 16 38 BRR EL ALTO</td>
+  <td>Valle del Cauca / Restrepo / Colombia</td>
+  <td>3127865674</td>
+  <td>dileyes@hotmail.com</td>
+</tr>
+<tr>
+  <td>900543696-0</td>
+  <td>MAMUT 303 COLISION S.A.S</td>
+  <td>2380393</td>
+  <td>CL 35 53 22</td>
+  <td>Antioquia / Medellín / Colombia</td>
+  <td>3127918826</td>
+  <td>facturacion@mamut303.co</td>
+</tr>
+
+<tr>
+  <td>901576802-0</td>
+  <td>SEXTANTE DRONES S.A.S</td>
+  <td>2383034</td>
+  <td>CL 15 NORTE 14 16 OF 501</td>
+  <td>Quindío / Armenia / Colombia</td>
+  <td>3146178217</td>
+  <td>sextantedrones@yahoo.com</td>
+</tr>
+
+<tr>
+  <td>901945410-0</td>
+  <td>AGRICOLA FERNÁNDEZ S.A.S ZOMAC</td>
+  <td>2383212</td>
+  <td>CR 13 A 16 03 URB VILLA ROSITA</td>
+  <td>Valle del Cauca / Roldanillo / Colombia</td>
+  <td>3142155154</td>
+  <td>agricolafernandezsaszomac@gmail.com</td>
+</tr>
+
+<tr>
+  <td>830079015-1</td>
+  <td>MELTEC COMUNICACIONES S.A.S</td>
+  <td>2383822</td>
+  <td>CL 130 A 58 A 29</td>
+  <td>Bogotá D.C / Colombia</td>
+  <td>3138404040</td>
+  <td>info@meltec.com.co</td>
+</tr>
+
+<tr>
+  <td>900385053-7</td>
+  <td>SEGURIDAD Y SERVICIOS JYS S.A.S</td>
+  <td>2394545</td>
+  <td>CL 52 71 A 23 IN 401</td>
+  <td>Antioquia / Medellín / Colombia</td>
+  <td>3148559600</td>
+  <td>ventas@sirveavl.co</td>
+</tr>
+
+<tr>
+  <td>901974931-1</td>
+  <td>ECOSENSOR S.A.S</td>
+  <td>2395043</td>
+  <td>CALLE 38 NO 27-66 BARRIO LA CLARITA</td>
+  <td>Quindío / Armenia / Colombia</td>
+  <td>3147058198</td>
+  <td>ECOSENSOR.AGRICULTURA@GMAIL.COM</td>
+</tr>
+
+<tr>
+  <td>900300532-9</td>
+  <td>CARPATEZ GROUP S.A.S</td>
+  <td>2396936</td>
+  <td>CRT VIA PRINCIPAL PILES SN 240 CAS PILES - PILES</td>
+  <td>Valle del Cauca / Palmira / Colombia</td>
+  <td>3184428955</td>
+  <td>ctzferias@gmail.com</td>
+</tr>
+
+<tr>
+  <td>79762603-8</td>
+  <td>FAUNIER ROLANDO LOPEZ AVILA</td>
+  <td>2397096</td>
+  <td>CR 6 8 32 BRR CENTRO</td>
+  <td>Tolima / Planadas / Colombia</td>
+  <td>3163482532</td>
+  <td>contable1@elcorralagro.com</td>
+</tr>
+
+<tr>
+  <td>1006316694-1</td>
+  <td>ANGIE CAROLINA RUIZ VALENCIA</td>
+  <td>2398769</td>
+  <td>CR 4 3 21 CORR PRIMAVERA</td>
+  <td>Valle del Cauca / Bolívar / Colombia</td>
+  <td>3187178677</td>
+  <td>1006316694@recepciondefacturas.co</td>
+</tr>
+
+<tr>
+  <td>860511458-2</td>
+  <td>AGROINTEGRAL ANDINA S.A.S</td>
+  <td>2402552</td>
+  <td>VDA VUELTA GRANDE A 150 M GT SIBERIA VIA COTA COMPLEJO LOG INDUSTRIAL SIBERIA BG 23 24</td>
+  <td>Cundinamarca / Cota / Colombia</td>
+  <td>3208772135</td>
+  <td>impuestos@corporativocsl.co</td>
+</tr>
+
+<tr>
+  <td>1094893843-6</td>
+  <td>LIZETE DIANE BETANCURT CASTAÑEDA</td>
+  <td>2402642</td>
+  <td>CL 26 45 71</td>
+  <td>Quindío / Armenia / Colombia</td>
+  <td>3022679407</td>
+  <td>recepcionfesgd@gmail.com</td>
+</tr>
+
+<tr>
+  <td>10176272-9</td>
+  <td>ALEXANDER OSORIO PÉREZ</td>
+  <td>2403750</td>
+  <td>CL 13 19 26 LC 19 PASAJE SAN FERNANDO</td>
+  <td>Quindío / Armenia / Colombia</td>
+  <td>3116480294</td>
+  <td>alezosorioperez@gmail.com</td>
+</tr>
+
+<tr>
+  <td>901316773-0</td>
+  <td>VITTRA SAS</td>
+  <td>2410936</td>
+  <td>CL 116 23 57 OF 201</td>
+  <td>Bogotá D.C / Colombia</td>
+  <td>3208167669</td>
+  <td>hernan.grau@onelab.com.co</td>
+</tr>
+
+<tr>
+  <td>5187400</td>
+  <td>DATUM SOCIEDAD ANONIMA</td>
+  <td>2412166</td>
+  <td>5a. AVENIDA 5-55 ZONA 14 EUROPLAZA TORRE II OFICINA 1202</td>
+  <td>Guatemala</td>
+  <td>2364-5300</td>
+  <td>vcifuentes@datum.com.gt</td>
+</tr>
+
+<tr>
+  <td>901016903-4</td>
+  <td>SQM COLOMBIA SAS</td>
+  <td>2415027</td>
+  <td>CR 7 32 33 OF 2903</td>
+  <td>Bogotá D.C / Colombia</td>
+  <td>6013384904</td>
+  <td>pedro.rada@sqm.com</td>
+</tr>
+
+<tr>
+  <td>901945604-2</td>
+  <td>FREIGHTWISE S.A.S</td>
+  <td>2416198</td>
+  <td>CR 9 74 08 ED PROFINANZAS OF 805</td>
+  <td>Bogotá D.C / Colombia</td>
+  <td>3203214382</td>
+  <td>e-documents@freight-wise.com</td>
+</tr>
+
+<tr>
+  <td>900228522-8</td>
+  <td>FUMICONTROL GESTIÓN AMBIENTAL S.A.S</td>
+  <td>2417061</td>
+  <td>CR 75 13 A 14</td>
+  <td>Valle del Cauca / Cali / Colombia</td>
+  <td>3153686493</td>
+  <td>cadministrativa@fumicontrol.com.co</td>
+</tr>
+<tr>
+  <td>800195603-1</td>
+  <td>CYC TRADING SAS</td>
+  <td>2427084</td>
+  <td>AUT MEDELLIN KM 3 4 BG 2 MD 3 CENTRO EMPRESARIAL ME</td>
+  <td>Cundinamarca / Cota / Colombia</td>
+  <td>6018966488</td>
+  <td>gerencia@cyctrading.com</td>
+</tr>
+
+<tr>
+  <td>890705079-7</td>
+  <td>MAYORISTAS AGRÍCOLAS S.A</td>
+  <td>2427094</td>
+  <td>AUT MEDELLIN KM 3 PUNTO 4 CENTRO EMPRESARIAL METROPOLITANO MD 2 BG 36</td>
+  <td>Cundinamarca / Cota / Colombia</td>
+  <td>6018415050</td>
+  <td>magro@magro.com.co</td>
+</tr>
+
+<tr>
+  <td>901477377-7</td>
+  <td>COMERCIALIZADORA VITALAGRO SAS</td>
+  <td>2427826</td>
+  <td>CR 47 64 A 163 PAR EMPRESARIAL RIONEGRO BG 16</td>
+  <td>Antioquia / Rionegro / Colombia</td>
+  <td>3223498373</td>
+  <td>vitalagro@vitalagro.co</td>
+</tr>
+<tr>
+  <td>1085096813-3</td>
+  <td>LEIDYS BANESA MARTINES VASQUEZ</td>
+  <td>2428422</td>
+  <td>CL 2 7 03 CORR BARRAGAN VALLE</td>
+  <td>Valle del Cauca / Caicedonia / Colombia</td>
+  <td>3223676325</td>
+  <td>bcssolucionesagricolas@gmail.com</td>
+</tr>
+
+<tr>
+  <td>1097406400-0</td>
+  <td>DANIEL FELIPE TOVAR RENDON</td>
+  <td>2437033</td>
+  <td>CR 19 # 39 - 57</td>
+  <td>Quindío / Calarcá / Colombia</td>
+  <td>3113237055</td>
+  <td>daniel.tovar.rendon@gmail.com</td>
+</tr>
+
+<tr>
+  <td>805020771-6</td>
+  <td>AGRICULTURA Y SERVICIOS S.A.S</td>
+  <td>2437361</td>
+  <td>VDA VUELTA GRANDE A 150 M GT SIBERIA VIA COTA COMPLEJO LOG INDUSTRIAL SIBERIA BG 23 24</td>
+  <td>Cundinamarca / Cota / Colombia</td>
+  <td>3208772135</td>
+  <td>impuestos@corporativocsl.co</td>
+</tr>
+
+<tr>
+  <td>890316745-5</td>
+  <td>UNIVERSIDAD ICESI</td>
+  <td>2439005</td>
+  <td>CL 18 122 135</td>
+  <td>Valle del Cauca / Cali / Colombia</td>
+  <td>6025552334</td>
+  <td>facturaeclientes@icesi.edu.co</td>
+</tr>
+
+<tr>
+  <td>900520095-5</td>
+  <td>GEOMAP S.A.S</td>
+  <td>2439417</td>
+  <td>CL 100 8 A 49 OF 601 TO B</td>
+  <td>Bogotá D.C / Colombia</td>
+  <td>3002375702</td>
+  <td>contabilidad@geomap.com.co</td>
+</tr>
+
+<tr>
+  <td>1088244168-7</td>
+  <td>DIEGO ALEJANDRO MOSQUERA AYALA</td>
+  <td>2440070</td>
+  <td>MZ L CA 12 POBLADO 1</td>
+  <td>Risaralda / Pereira / Colombia</td>
+  <td>3155093986</td>
+  <td>chamene194@hotmail.com</td>
+</tr>
+
+<tr>
+  <td>900997618-4</td>
+  <td>QUIMICOMPANY SAS</td>
+  <td>2443025</td>
+  <td>CR 34 C 17 B 80 SUR</td>
+  <td>Bogotá D.C / Colombia</td>
+  <td>3165326905</td>
+  <td>info@quimicompany.com.co</td>
+</tr>
+
+<tr>
+  <td>900781899-9</td>
+  <td>EQUIPMASTER EJE S.A.S</td>
+  <td>2448493</td>
+  <td>EQUIPMASTER EJE S.A.S</td>
+  <td>Risaralda / Pereira / Colombia</td>
+  <td>3006106195</td>
+  <td>ventas1@equipmaster.com.co</td>
+</tr>
+
+<tr>
+  <td>1094954625-1</td>
+  <td>JULIANA CORTES PATIÑO</td>
+  <td>2448513</td>
+  <td>CC SAN SUR LC 31 P 1 CR 18 59 03</td>
+  <td>Quindío / Armenia / Colombia</td>
+  <td>3205020294</td>
+  <td>thcentrodeservicios@gmail.com</td>
+</tr>
+
+<tr>
+  <td>9737881-9</td>
+  <td>JAVIER ALEXANDER GIRALDO RIASCO</td>
+  <td>2449048</td>
+  <td>BRR EL SILENCIO MZ 6 6</td>
+  <td>Quindío / Armenia / Colombia</td>
+  <td>3165003436</td>
+  <td>alexandergiraldo309@gmail.com</td>
+</tr>
+<tr>
+  <td>901914510-6</td>
+  <td>RIEGOS Y SOLUCIONES AGRICOLAS DEL NORTE</td>
+  <td>2449053</td>
+  <td>CL 12 11 80 BRR BELEN</td>
+  <td>Valle del Cauca / La Unión / Colombia</td>
+  <td>3188238314</td>
+  <td>RIEGOSYSOLUCIONESAGRICOLASA@GMAIL.COM</td>
+</tr>
+
+<tr>
+  <td>89009482-1</td>
+  <td>ARLINGTON MARTINEZ PACHON</td>
+  <td>2457112</td>
+  <td>CL 21 #34 - 44</td>
+  <td>Quindío / Armenia / Colombia</td>
+  <td>3108222234</td>
+  <td>arlingtongruas@hotmail.com</td>
+</tr>
+
+<tr>
+  <td>901273252-9</td>
+  <td>ROTOVEL SAS</td>
+  <td>2461324</td>
+  <td>CR 50 91 SUR 101 IN 103</td>
+  <td>Antioquia / La Estrella / Colombia</td>
+  <td>322880426</td>
+  <td>jorge.velez1@outlook.es</td>
+</tr>
+
+<tr>
+  <td>13992002-8</td>
+  <td>HOVER ALBERTO QUINTERO MUÑOZ</td>
+  <td>2461333</td>
+  <td>VRD LA LEONA</td>
+  <td>Tolima / Cajamarca / Colombia</td>
+  <td>3213651861</td>
+  <td>quinterooberalberto123@gmail.com</td>
+</tr>
+
+<tr>
+  <td>901168372-5</td>
+  <td>ALMI FINANCIERA S.A.S</td>
+  <td>2465655</td>
+  <td>CR 19 100 45</td>
+  <td>Bogotá D.C / Colombia</td>
+  <td>3173632783</td>
+  <td>contabilidad@almifinanciera.com</td>
+</tr>
+
+<tr>
+  <td>20608150847</td>
+  <td>IBRO FOOD SAFETY S.A.C</td>
+  <td>2469293</td>
+  <td>PJ. Elvira García Nro. 434, Urb. Las Quintana, Distrito Trujillo, Provincia Trujillo, Departamento La Libertad – Perú</td>
+  <td>La Libertad / Trujillo / Perú</td>
+  <td>51 999123016</td>
+  <td>contabilidadbbga@gmail.com</td>
+</tr>
+
+<tr>
+  <td>800148756-8</td>
+  <td>TRANSPORTES LODISCARGA S.A.S</td>
+  <td>2473736</td>
+  <td>CR 52 A 10 75</td>
+  <td>Antioquia / Medellín / Colombia</td>
+  <td>6042558237</td>
+  <td>Imgonzalez@tanquesycamiones.com</td>
+</tr>
+
+<tr>
+  <td>901869709-1</td>
+  <td>LABORAGRO TRANSPORTE S.A.S</td>
+  <td>2473954</td>
+  <td>CALLE 41A # 80-09</td>
+  <td>Antioquia / Rionegro / Colombia</td>
+  <td>3217820425</td>
+  <td>LABORAGROTRANSPORTE@GMAIL.COM</td>
+</tr>
+
+<tr>
+  <td>900852661-9</td>
+  <td>FLETES Y FACTURAS S.A.S</td>
+  <td>2479901</td>
+  <td>CR 52 A 10 75</td>
+  <td>Antioquia / Medellín / Colombia</td>
+  <td>3117702020</td>
+  <td>garistizabal@tanquesycamiones.com</td>
+</tr>
+
+<tr>
+  <td>860075558-1</td>
+  <td>UNIVERSIDAD DE LA SABANA</td>
+  <td>2479965</td>
+  <td>CAMPUS DEL PUENTE DEL COMUN KM 7 AUT NORTE DE BOGOTA</td>
+  <td>Cundinamarca / Chía / Colombia</td>
+  <td>6018615555</td>
+  <td>USABANA@UNISABANA.EDU.CO</td>
+</tr>
+<tr>
+  <td>830092048-8</td>
+  <td>CASAGRO SAS</td>
+  <td>2480621</td>
+  <td>CL 60 16 28 BG 3 BG 6 BRR LA ESMERALDA</td>
+  <td>Santander / Girón / Colombia</td>
+  <td>3165391685</td>
+  <td>contabilidad2@casagro.co</td>
+</tr>
+
+<tr>
+  <td>830046268-6</td>
+  <td>CREDICORP CAPITAL ALTA LIQUIDEZ</td>
+  <td>2484707</td>
+  <td>CL 34 6 65</td>
+  <td>Bogotá D.C / Colombia</td>
+  <td>6013394400</td>
+  <td>impuestos@credicorpcapital.com</td>
+</tr>
+
+<tr>
+  <td>1096035523-1</td>
+  <td>BRIAN CAMILO BETANCOURTH MORENO</td>
+  <td>2487433</td>
+  <td>CL 13 9 27</td>
+  <td>Quindío / La Tebaida / Colombia</td>
+  <td>3104070585</td>
+  <td>briancamilo78@hotmail.com</td>
+</tr>
+
+<tr>
+  <td>NL 814673430</td>
+  <td>Nature's Pride BV</td>
+  <td>2487441</td>
+  <td>Honderdland 611, 2676 LV Maasdijk, Netherlands</td>
+  <td>Zuid-Holland / Maasdijk / Netherlands</td>
+  <td>+31 174 219155</td>
+  <td>avocado@naturespride.nl</td>
+</tr>
+
+<tr>
+  <td>901086984-1</td>
+  <td>DISTRIBUCIONES FERRELECTRICOS RESTREPO S.A.S</td>
+  <td>2498911</td>
+  <td>CR 20 18 13</td>
+  <td>Quindío / Armenia / Colombia</td>
+  <td>3122750882</td>
+  <td>distribucionesfr@ferrelectricos.com</td>
+</tr>
+
+<tr>
+  <td>74372755-7</td>
+  <td>JESUS ANTONIO CORONADO</td>
+  <td>2500211</td>
+  <td>CR 25 86 71 BRR LA VILLA</td>
+  <td>Risaralda / Pereira / Colombia</td>
+  <td>3107547274</td>
+  <td>antoniocb7719@gmail.com</td>
+</tr>
+
+<tr>
+  <td>1112904520-6</td>
+  <td>WILLER PARRA ACOSTA</td>
+  <td>2501003</td>
+  <td>CR 6 8 40</td>
+  <td>Valle del Cauca / El Cairo / Colombia</td>
+  <td>3238080701</td>
+  <td>wlrpa@hotmail.com</td>
+</tr>
+
+<tr>
+  <td>7530154-5</td>
+  <td>GUSTAVO OYOLA MORALES</td>
+  <td>2503693</td>
+  <td>CR 14 9 46</td>
+  <td>Quindío / Armenia / Colombia</td>
+  <td>3116280635</td>
+  <td>gustavooyolam@hotmail.com</td>
+</tr>
+
+<tr>
+  <td>901749875-1</td>
+  <td>CALMIO S.A.S</td>
+  <td>2505228</td>
+  <td>CR 29 C 18 A SUR 168</td>
+  <td>Antioquia / Medellín / Colombia</td>
+  <td>3052393053</td>
+  <td>camilo_opi@hotmail.com</td>
+</tr>
+
+<tr>
+  <td>52862140-0</td>
+  <td>LINA MARIA ALVAREZ PEÑA</td>
+  <td>2514551</td>
+  <td>CR 25 12 SUR 59 OF 236 ED COMPLEX LOS BALSOS</td>
+  <td>Antioquia / Medellín / Colombia</td>
+  <td>3114778786</td>
+  <td>lina_alvarez_cesa@hotmail.com</td>
+</tr>
+<tr>
+  <td>901114013-4</td>
+  <td>OSMOTECH S.A.S</td>
+  <td>2514568</td>
+  <td>CL 39 D SUR 24 E E 140 OF 302</td>
+  <td>Antioquia / Envigado / Colombia</td>
+  <td>3043804876</td>
+  <td>facturaosmo@gmail.com</td>
+</tr>
+
+<tr>
+  <td>901461876-0</td>
+  <td>TRANSPORTES COLDTRUCK SAS</td>
+  <td>2519455</td>
+  <td>TV 1 8 A 45 LT 8 LC 1 CONJ AGUILAS DE LOS ANDES</td>
+  <td>Cundinamarca / Tabio / Colombia</td>
+  <td>3208453129</td>
+  <td>transportescoldtrucksas@gmail.com</td>
+</tr>
+
+<tr>
+  <td>93061883-6</td>
+  <td>JANNER MAURICIO GARCIA ARENAS</td>
+  <td>2524933</td>
+  <td>CL 9 10 52</td>
+  <td>Valle del Cauca / Cartago / Colombia</td>
+  <td>3217659440</td>
+  <td>zapatajimenezmarisol@gmail.com</td>
+</tr>
+
+<tr>
+  <td>901103590-5</td>
+  <td>TRANS POLAR SAS</td>
+  <td>2527644</td>
+  <td>CL 98 70 91 OF 1110 CENTRO EMPRESARIAL PONTEVEDRA</td>
+  <td>Bogotá D.C / Colombia</td>
+  <td>6017432970</td>
+  <td>contabilidad@transpolarsas.com</td>
+</tr>
+
+<tr>
+  <td>900014141-6</td>
+  <td>H UJUETA S.A.S.</td>
+  <td>2529311</td>
+  <td>KM 8 BQUILLA-TUBARA LT 47 ZF CAYENA</td>
+  <td>Atlántico / Barranquilla / Colombia</td>
+  <td>6053366005</td>
+  <td>contabilidad@ujueta.com</td>
+</tr>
+
+<tr>
+  <td>1115194974-9 </td>
+  <td>ANDRES FELIPE RAMOS GONZALEZ</td>
+  <td>2532093</td>
+  <td>CR 9 # 7 - 59 </td>
+  <td>Valle del Cauca / Caicedonia / Colombia</td>
+  <td>3107232202</td>
+  <td>andresframos30.9@gmail.com</td>
+</tr>
+
+<tr>
+  <td>901118572-8 </td>
+  <td>DISTRITODO Y MAS MG S.A.S.</td>
+  <td>2532162</td>
+  <td>CL 100 BIS   17 A 29 BG 3 BRR BELMONTE</td>
+  <td>Risaralda / Pereira / Colombia</td>
+  <td>3007661921</td>
+  <td> andresframos30.9@gmail.com </td>
+</tr>
+<tr>
+    <td>1116439309-8</td>
+    <td>YAMIT ALEXIS JIMENEZ AROS</td>
+    <td>2538292</td>
+    <td>CL 6 B # 7 EN - 63 BRR SAN JUAN BOSCO</td>
+    <td>Valle del Cauca / Roldanillo / Colombia</td>
+    <td>N/A</td>
+    <td>alexisjimenez718@gmail.com</td>
+</tr>
+
+<tr>
+    <td>902061403-8</td>
+    <td>AGRO VERDE CM S.A.S</td>
+    <td>2538532</td>
+    <td>VERDU 1 TORRE 4 APARTAMENTO 601</td>
+    <td>Quindío / Armenia / Colombia</td>
+    <td>N/A</td>
+    <td>AGROVERDECMSAS@GMAIL.COM</td>
+</tr>
+
+<tr>
+    <td>891901194-1</td>
+    <td>CUERPO DE BOMBEROS VOLUNTARIOS DE BOLIVAR</td>
+    <td>2540902</td>
+    <td>CR 2 4 30</td>
+    <td>Valle del Cauca / Bolívar / Colombia</td>
+    <td>N/A</td>
+    <td>bolivar24b1@hotmail.com</td>
+</tr>
+
+<tr>
+    <td>891900790-5</td>
+    <td>CUERPO DE BOMBEROS ROLDANILLO</td>
+    <td>2540952</td>
+    <td>CL 10 10 06 BRR CENTRO</td>
+    <td>Valle del Cauca / Roldanillo / Colombia</td>
+    <td>N/A</td>
+    <td>cbvrol@yahoo.es</td>
+</tr>
+
+<tr>
+    <td>1116436850-8</td>
+    <td>ALVARO JAVIER HENAO RUIZ</td>
+    <td>2540957</td>
+    <td>CR 3 9 100</td>
+    <td>Valle del Cauca / Roldanillo / Colombia</td>
+    <td>N/A</td>
+    <td>talleralvaromotos06@hotmail.com</td>
+</tr>
+
+<tr>
+    <td>94482846-3</td>
+    <td>FABIAN ANDRES ARANGO RODRIGUEZ</td>
+    <td>2544037</td>
+    <td>CR 57 44 44</td>
+    <td>Antioquia / Copacabana / Colombia</td>
+    <td>N/A</td>
+    <td>fabian.arango5@gmail.com</td>
+</tr>
+
+<tr>
+    <td>860058979-5</td>
+    <td>BAM SAS</td>
+    <td>2544324</td>
+    <td>AUT MEDELLIN KM 1.5 COSTADO NORTE BG 2 PAR EMPRESARIAL SAN BERNARDO</td>
+    <td>Cundinamarca / Cota / Colombia</td>
+    <td>N/A</td>
+    <td>contador@bam.com.co</td>
+</tr>
+
+<tr>
+    <td>800069554-8</td>
+    <td>INTERTEK COLOMBIA S.A</td>
+    <td>2550741</td>
+    <td>CL 127 A 53 A 45 TO II OF 110</td>
+    <td>Bogotá D.C / Colombia</td>
+    <td>N/A</td>
+    <td>rep.legal.colombia@intertek.com</td>
+</tr>
+
+<tr>
+    <td>901143674-6</td>
+    <td>ESPECIALISTAS PREVENCIÓN DE RIESGOS S.A</td>
+    <td>2550848</td>
+    <td>AV 3 C NORTE 38 A 11</td>
+    <td>Valle del Cauca / Cali / Colombia</td>
+    <td>N/A</td>
+    <td>contabilidad@epri.com.co</td>
+</tr>
+
+<tr>
+    <td>1094940410-2</td>
+    <td>SUSY LEZAMA VELASQUEZ</td>
+    <td>2552701</td>
+    <td>CL 13 NORTE 13 57</td>
+    <td>Quindío / Armenia / Colombia</td>
+    <td>N/A</td>
+    <td>susylezamav@hotmail.com</td>
+</tr>
+
+<tr>
+    <td>800159100-4</td>
+    <td>MANPOWER PROFESSIONAL LTDA</td>
+    <td>2552718</td>
+    <td>CR 48 32 B SUR 139 OF 906</td>
+    <td>Antioquia / Envigado / Colombia</td>
+    <td>N/A</td>
+    <td>tatiana.molina@manpowergroup.com.co</td>
+</tr>
+
+<script>
+  document.getElementById("buscador").addEventListener("keyup", function() {
+    let filtro = this.value.toLowerCase();
+    let filas = document.querySelectorAll("#listaProveedoresTabla tbody tr");
+
+    filas.forEach(function(fila) {
+      let textoFila = fila.textContent.toLowerCase();
+      fila.style.display = textoFila.includes(filtro) ? "" : "none";
+    });
+  });
+</script>
+
+      <!-- … aquí siguen todas las filas hasta completar los 106 proveedores -->
+    </tbody>
+  </table>
+
+  <!-- Botón para abrir carpeta en OneDrive -->
+  <a href="https://olmecaguatemala-my.sharepoint.com/:f:/r/personal/aehernandezg_grupohame_com/Documents/Archivo%20de%20Angie%20Emilse%20Hernandez%20Gil%20-%20PROVEEDORES/CREACION%20DE%20TERCEROS?d=wc6680c951b9b41639a1565c3c45e7f34&csf=1&web=1&e=dmYIhM" 
+     target="_blank"
+     style="display:inline-block; margin-top:15px; background:#2e7d32; color:white; padding:10px 15px; border-radius:8px; text-decoration:none; font-weight:bold;">
+     📂 Abrir Carpeta de Proveedores (OneDrive)
+  </a>
+</section>
+
+
+<footer>
+© 2026 Agrícola Atilatán | Solicitud de creación de proveedor 
+</footer>
+
+<a href="https://wa.me/573105627201" 
+   target="_blank" 
+   style="position:fixed; bottom:20px; right:20px; background-color:#25D366; color:white; padding:12px 20px; border-radius:50px; font-weight:bold; text-decoration:none; box-shadow:0 4px 6px rgba(0,0,0,0.2); z-index:999;">
+   📱 WhatsApp
+</a>
+
+<script>
+
+function mostrar(seccion) {
+
+ document.getElementById("bannerGif").style.display = "none";
+
+ document.querySelectorAll("section").forEach(function(s) {
+ s.style.display = "none";
+ });
+
+ document.getElementById(seccion).style.display = "block";
+}
+
+function mostrarInfo() {
+document.getElementById("infoEmpresa").style.display = "block";
+}
+
+function cerrarInfo() {
+document.getElementById("infoEmpresa").style.display = "none";
+}
+</script>
+</body>
+</html>
